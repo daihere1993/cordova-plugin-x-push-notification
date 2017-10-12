@@ -6,7 +6,7 @@
 
 - Get iOS device token.
 - Get iOS remote notification info.
-- Push notification for android and iOS.
+- Push notification for android and iOS(Android push notification not work temporally).
 
 # Install
 
