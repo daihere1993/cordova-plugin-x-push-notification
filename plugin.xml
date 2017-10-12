@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-x-push-notification" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>cordova-plugin-messager</name>
+    <js-module name="cordova-plugin-x-push-notification" src="www/cordova-plugin-x-push-notification.js">
+        <clobbers target="XPushNotification" />
+    </js-module>
+
+    <engines>
+        <engine name="cordova" version=">=7.0.0"/>
+        <engine name="cordova-android" version=">=6.2.1"/>
+        <engine name="cordova-ios" version=">=4.4.0"/>
+    </engines>
+
+    <!-- android -->
+    <platform name="android">
+         
+    </platform>
+    
+    <!-- ios -->
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="CDVXNotification">
+                <param name="ios-package" value="CDVXNotification"/>
+            </feature>
+        </config-file>
+
+        <!-- plugin source code -->
+        <header-file src="src/ios/CDVXNotification.h"/>
+        <header-file src="src/ios/AppDelegate+xNotification.h"/>
+        <source-file src="src/ios/CDVXNotification.m"/>
+        <source-file src="src/ios/AppDelegate+xNotification.m"/>
+
+        <!-- MQTTKit Library -->
+        <!-- <header-file src="src/ios/MQTTKit.h"/> -->
+        <!-- <source-file src="src/ios/libMQTTKit.a" framework="true"/> -->
+    </platform>
+</plugin>
